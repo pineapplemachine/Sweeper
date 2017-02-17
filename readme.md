@@ -49,7 +49,8 @@ brings up the menu!
 ![the menu](screenshots/menu.png)
 
 Here you can start a **new game** with all fresh, unrevealed tiles, you can
-**quit** the game, or you can open the **options** menu.
+**quit** the game, or you can open the **options** menu, just by clicking
+on those corresponding words.
 You can also return to your game by pressing `escape` again!
 
 If your sweeping adventure takes you into the options menu, you'll find that
