@@ -204,7 +204,10 @@ class Sweeper: Application{
     
     /// Update cursor information according to mouse position
     void updatemouse(){
-        mousecell = (mouse.position - boardtarget.topleft) / (boardtarget.size / board.size);
+        mousecell = Vector2!int(
+            (mouse.position - boardtarget.topleft) /
+            (Vector2!double(boardtarget.size) / board.size)
+        );
         mouseinboard = mousecell in Box!int(board.size) && (
             mouse.position.x >= boardtarget.x &&
             mouse.position.y >= boardtarget.y
