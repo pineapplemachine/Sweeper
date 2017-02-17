@@ -230,9 +230,9 @@ class Sweeper: Application{
     void play(){
         if(mouseinboard){
             if(!board[mousecell].revealed){
-                if(mouse.released(mouse.Button.Right)){
+                if(mouse.released(mouse.Button.Right) && !board[mousecell].revealed){
                     board[mousecell].flagged = !board[mousecell].flagged;
-                }else if(mouse.released(mouse.Button.Left)){
+                }else if(mouse.released(mouse.Button.Left) && !board[mousecell].flagged){
                     board.reveal(mousecell.x, mousecell.y);
                     if(board.revealedmine){
                         setgameover(State.Lose);
