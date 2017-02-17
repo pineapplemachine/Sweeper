@@ -162,7 +162,7 @@ struct Board{
         this.fill(Cell.Empty);
         auto rng = xorshift();
         for(uint i = 0; i < minecount; i++){
-            uint index = rng.random!uint(0, this.cells.length - 1);
+            uint index = rng.random!uint(uint(0), cast(uint)(this.cells.length - 1));
             while(this.cells[index].mined) index = (index + 1) % this.cells.length;
             this.cells[index] = Cell.Mine;
         }
